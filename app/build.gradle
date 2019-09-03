@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.exoplayer.fullscreen"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions{
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.10.4'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.4'
+    implementation 'com.google.android.exoplayer:extension-ima:2.10.4'
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+
+}
